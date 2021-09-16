@@ -10,6 +10,12 @@ namespace Ex01
     {
         static void Main(string[] args)
         {
+            PrintMessage("Hello World!");
+        }
+
+        public static void PrintMessage(string input)
+        {
+            Console.WriteLine(input);
         }
     }
 }
