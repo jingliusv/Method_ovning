@@ -12,10 +12,7 @@ namespace Ex09
         {
             Console.Write("Mata in en bokstav: ");
             string input = Console.ReadLine();
-            if(CheckVokal(input))
-                Console.WriteLine("Det är en vokal.");
-            else
-                Console.WriteLine("Det är inte en vokal.");
+            Console.WriteLine(CheckVokal(input) ? "Det är en vokal." : "Det är inte en vokal.");
         }
 
         private static bool CheckVokal(string input)
