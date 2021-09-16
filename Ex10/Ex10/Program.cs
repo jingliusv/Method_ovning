@@ -12,20 +12,27 @@ namespace Ex10
         {
             string text = "this is fun";
             Translate(ref text);
+            Console.WriteLine(text);
         }
 
-        private static void Translate(ref string text)
+        public static void Translate(ref string text)
         {
-            string vokal = "aeiouyåäö";
-            StringBuilder sb = new StringBuilder();
+            string vokal = "aeiouyåäö ";
+            string newString = string.Empty;
+            //StringBuilder sb = new StringBuilder();
             for (int i = 0; i < text.Length; i++)
             {
+                //if (vokal.Contains(text[i]))
+                //    sb.Append(text[i]);
+                //else
+                //    sb.Append($"{text[i]}o{text[i]}");
                 if (!vokal.Contains(text[i]))
-                    sb.Append($"{text[i]}o{text[i]}");
+                    newString += text[i] + "o" + text[i];
                 else
-                    sb.Append(text[i]);              
+                    newString += text[i];
             }
-            Console.WriteLine(sb);           
+            text = newString;
+            //text = sb.ToString();
         }
     }
 }
