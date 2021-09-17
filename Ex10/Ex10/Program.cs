@@ -17,7 +17,7 @@ namespace Ex10
         //solution 1
         public static void Translate(ref string text)
         {
-            string vokal = "aeiouyåäö ";
+            string vokal = "/([^aeiouyåäö ])/g";           //"aeiouyåäö "
             string newString = string.Empty;
             for (int i = 0; i < text.Length; i++)
             {
